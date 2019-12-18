@@ -16,45 +16,5 @@ kotlin {
 }
 
 repositories {
-  mavenLocal()
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/// hidden part
-repositories {
-  maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
-  maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
+  mavenCentral()
 }
