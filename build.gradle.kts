@@ -1,60 +1,26 @@
 plugins {
-  kotlin("js") version "1.3.50"
+  id("org.jetbrains.kotlin.js") version "1.3.61"
 }
 
 kotlin {
   target {
     useCommonJs()
     nodejs()
+    browser {
+
+    }
   }
 
-  sourceSets["main"].dependencies {
-    implementation(kotlin("stdlib-js"))
-
-    implementation(npm("left-pad", "1.3.0"))
+  sourceSets.main {
+    dependencies {
+      implementation(npm("left-pad"))
+    }
   }
 }
 
 repositories {
-  mavenLocal()
+  mavenCentral()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/// hidden part
-repositories {
-  maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
-  maven(url = "https://dl.bintray.com/kotlin/kotlin-dev")
+dependencies {
+  implementation(kotlin("stdlib-js"))
 }
